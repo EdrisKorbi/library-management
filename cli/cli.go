@@ -206,11 +206,11 @@ func (cli *CLI) handleViewUserBorrowedHistory() {
 	list := cli.lib.GetUserBorrowedRecords(userID)
 
 	if len(list) == 0 {
-		fmt.Println("📚 No books in library.")
+		fmt.Println("📚 No books in histroy.")
 		return
 	}
 
-	fmt.Println("\n--- All Books ---")
+	fmt.Printf("\n--- All Books borrowed for user: %d ---\n", userID)
 
 	for _, value := range list {
 		fmt.Println(value.DisplayInfo())
