@@ -14,6 +14,11 @@ type BorrowRecord struct {
 	Status     string
 }
 
+const (
+	StatusBorrowed = "borrowed"
+	StatusReturned = "returned"
+)
+
 func (br BorrowRecord) DisplayInfo() string {
 	rd := "Not returned yet"
 
@@ -30,7 +35,7 @@ func (br BorrowRecord) DisplayInfo() string {
 func (br *BorrowRecord) MarkAsReturned() error {
 	now := time.Now()
 
-	br.Status = "returned"
+	br.Status = StatusReturned
 	br.ReturnDate = &now
 
 	return nil
