@@ -141,7 +141,7 @@ Test the application by:
 
 ## 👨‍💻 Author
 
-Edris Korbi
+Korbi Edris
 
 ## 📄 License
 
